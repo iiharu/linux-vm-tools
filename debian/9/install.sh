@@ -59,7 +59,8 @@ cp /etc/xrdp/sesman.ini /etc/xrdp/sesman.ini.orig
 sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=shared-drives/g' /etc/xrdp/sesman.ini
 
 # Changed the allowed_users
-echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
+cp /etc/X11/Xwrapper.config /etc/X11/Xwrapper.config.orig
+sed -i -e 's/allowed_users=console/allowed_users=anybody/g' /etc/X11/Xwrapper.config
 
 # Blacklist the vmw module
 if [ ! -e /etc/modprobe.d/blacklist_vmw_vsock_vmci_transport.conf ]; then
