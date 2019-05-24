@@ -14,8 +14,8 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 cat << EOF > /etc/apt/sources.list.d/backports.list
-deb https://deb.debian.org/debian stretch-backports main contrib non-free
-# deb-src https://deb.debian.org/debian stretch-backports main contrib non-free
+deb http://deb.debian.org/debian stretch-backports main contrib non-free
+# deb-src http://deb.debian.org/debian stretch-backports main contrib non-free
 EOF
 
 apt update && apt upgrade -y
