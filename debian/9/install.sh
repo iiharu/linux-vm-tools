@@ -45,7 +45,7 @@ systemctl enable xrdp-sesman
 
 cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.orig
 # use vsock transport.
-sed -i_orig -e 's/use_vsock=false/use_vsock=true/g' /etc/xrdp/xrdp.ini
+sed -i -e 's/use_vsock=false/use_vsock=true/g' /etc/xrdp/xrdp.ini
 # use rdp security.
 sed -i -e 's/security_layer=negotiate/security_layer=rdp/g' /etc/xrdp/xrdp.ini
 # remove encryption validation.
