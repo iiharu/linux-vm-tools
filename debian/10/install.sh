@@ -70,7 +70,6 @@ if [ ! -e /etc/modules-load.d/hv_sock.conf ]; then
 fi
 
 # Configure the policy xrdp session
-mkdir -p /etc/polkit-1/localauthority/50-local.d/
 cat > /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla <<EOF
 [Allow Colord all Users]cr
 Identity=unix-user:*
@@ -88,4 +87,6 @@ systemctl daemon-reload
 ###############################################################################
 
 echo "Install is complete."
-echo "Reboot your machine to begin using XRDP."
+echo "Poweroff your machine."
+echo "Launch powershell with Administrator privilege "
+echo "and run `Set-VM –VMName <YOUR_VM_NAME> -EnhancedSessionTransportType HvSocket' to enable enhanced session."
