@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# This script is for Debian 9 Stretch to install XRDP+XORGXRDP.
+# This script is for Debian 10 Buster to install XRDP+XORGXRDP.
 #
 
 ###############################################################################
