@@ -89,4 +89,4 @@ systemctl daemon-reload
 echo "Install is complete."
 echo "Poweroff your machine."
 echo "Launch powershell with Administrator privilege "
-echo "and run `Set-VM –VMName <YOUR_VM_NAME> -EnhancedSessionTransportType HvSocket' to enable enhanced session."
+echo "and run 'Set-VM –VMName <YOUR_VM_NAME> -EnhancedSessionTransportType HvSocket' to enable enhanced session."
